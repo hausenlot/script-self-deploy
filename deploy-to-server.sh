@@ -8,7 +8,7 @@ DEST_DIR="~/*-deploy"
 echo "🚀 Starting deployment to $SERVER_IP..."
 
 # 1. Sync files to the server (excluding node_modules and git)
-rsync -avz --exclude 'node_modules' --exclude '.git' --exclude 'dist' \
+rsync -avz --exclude 'node_modules' --exclude '.git' --exclude 'dist' --exclude 'deploy-to-server.sh'\
       ./ $SERVER_USER@$SERVER_IP:$DEST_DIR
 
 # 2. Run Docker commands on the server via SSH
