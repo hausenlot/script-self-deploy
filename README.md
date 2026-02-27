@@ -27,7 +27,8 @@ jobs:
           # Clean up space
           docker image prune -fp
 ```
-This basically tells the gh to hey use the self-hosted(this is the runner) and then the run is where the docker compose or docker command depends on the repository will be exected on where the runner is running, in my case its on my ubuntu server which is by the way can't be access via IP since i am behind CGNAT so we just basically uses the github to bridge the connection of my server to the wokflow.
+This basically tells the gh to hey use the self-hosted(this is the runner) and then the run is where the docker compose or docker command depends on the repository will be exected on where the runner is running, in my case its on my ubuntu server which is by the way can't be access via IP since i am behind CGNAT so we just basically uses the github to bridge the connection of my server to the wokflow.  
+
 3. One thing that is needed here is make sure it works first. meaning you can test deploy on the server via this script and then if it worked like 100% well maybe add jest later on the projects then we can do the this and well trigger the test as well lmao
 
 
